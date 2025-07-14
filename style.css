@@ -97,6 +97,7 @@ img {
 
 .sobre {
   border-top: 2px solid #2c70ff;
+  border-bottom: 2px solid #2c70ff;
   padding: 60px 10px;
   display: flex;
   flex-wrap: wrap;
@@ -122,8 +123,152 @@ img {
   min-width: 160px;
 }
 
+.produtos {
+  margin: 60px auto;
+}
+
+.produtos h1 {
+  font-size: 3rem;
+  margin: 0 10px 60px 10px;
+}
+
+.produtos-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.produtos-item {
+  flex: 1 1 175px;
+  margin: 10px;
+}
+
+.produtos-item h2 {
+  font-size: 3rem;
+  color: #a4a4a4;
+  background: #f7f7f7;
+  padding: 60px 20px;
+}
+
+.purple-border {
+  border-top: 8px solid #ae81ff;
+  align-self: center;
+}
+.pink-border {
+  border-top: 8px solid #f9265e;
+}
+.blue-border {
+  border-top: 8px solid #66d9eb;
+  align-self: flex-end;
+}
+
+.preco-bg {
+  background: #f7f7f7;
+}
+
+.preco {
+  padding: 60px 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.preco-item {
+  flex: 1;
+  min-width: 260px;
+  border: 2px solid #c4c4c4;
+  border-radius: 4px;
+  padding: 20px;
+  margin: 10px;
+}
+
+.preco-item h2 {
+  font-size: 3rem;
+  color: #a4a4a4;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.preco-item span {
+  max-width: 300px;
+  margin: 20px auto;
+  display: block;
+  font-size: 3rem;
+  text-align: center;
+  font-weight: bold;
+  padding: 10px 0 10px 0;
+  border-top: 4px solid #f1f1f1;
+  border-bottom: 4px solid #f1f1f1;
+}
+
+.preco-item sup {
+  font-size: 1.5rem;
+}
+.preco-item ul {
+  max-width: 300px;
+  margin: 20px auto;
+  font-size: 1.25rem;
+  font-style: italic;
+  color: #7c7c7c;
+}
+
+.preco-item li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.preco-item li::after {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #2c70ff;
+}
+.preco-item a {
+  background: #2c70ff;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.75rem;
+  max-width: 300px;
+  display: block;
+  margin: 20px auto;
+  padding: 8px 0;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.preco-item a:hover {
+  background: #6093ff;
+  transition: 0.5s;
+}
+
 @media (max-width: 530px) {
   .menu {
     justify-content: center;
+  }
+}
+@media (max-width: 800px) {
+  .produtos-item h2 {
+    font-size: 2.25rem;
+  }
+}
+@media (max-width: 800px) {
+  .produtos-container {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+@media (max-width: 860px) {
+  .preco {
+    align-items: flex-end;
+    justify-content: center;
+  }
+  .preco-item {
+    max-width: 500px;
+  }
+  .preco .preco-item:nth-child(3) {
+    order: -2;
   }
 }
